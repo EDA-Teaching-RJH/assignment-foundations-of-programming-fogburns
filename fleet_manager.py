@@ -178,3 +178,56 @@ def co_office():
     ca = rnk.count("Captain")
     co = rnk.count("Commander")
     print("Amount of officers;\nCaptain(s) -",ca,"\nCommander(s) -",co,"\nTotal :",co+ca)
+
+def menu():
+    while True:
+        opt_dict = {"Add a new member":1,"Remove an existing member":2,"Update rank":3,"Display current crew":4,"Search by term":5,"Search by division":6,"Show total payroll":7,"Amount of highly ranked members":8,"Exit":0}
+        print("Welcome "+user_nam+"\nSelect an option:")
+        print(f"{'\n1] Add a new member':25} {'[2] Remove an existing member':25} {'\n3] Update rank':25} {'[4] Display current crew':25} {'\n5] Search by term':25} {'[6] Search  by division':25} {'\n7] Show total payroll':25} {'[8] Count Officers':25} {'\n0] Exit'}")
+        opt = input(">>")
+        try:
+            opt = int(opt)
+        except ValueError:
+            print("\n")
+        if opt in opt_dict.values():
+            print("**ACCEPTED**")
+            if opt == 1:
+                print("**INITIALIZING**")
+                add_mem()
+                menu()
+            elif opt == 2:
+                print("**INITIALIZING**")
+                rem_mem()
+                menu()
+            elif opt == 3:
+                print("**INITIALIZING**")
+                up_rnk()
+                menu()
+            elif opt == 4:
+                print("**INITIALIZING**")
+                init_data()
+                menu()
+            elif opt == 5:
+                print("**INITIALIZING**")
+                search()
+                menu()
+            elif opt == 6:
+                print("**INITIALIZING**")
+                filter()
+                menu()
+            elif opt == 7:
+                print("**INITIALIZING**")
+                pay_roll()
+                menu()
+            elif opt == 8:
+                print("**INITIALIZING**")
+                co_office()
+                menu()
+            elif opt == 0:
+                print("**EXITING PROGRAM**")
+                exit()
+        else:
+            print("**INVALID INPUT**")
+
+new_user()
+menu()
