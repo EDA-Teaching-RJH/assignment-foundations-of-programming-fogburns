@@ -1,0 +1,17 @@
+nam = ["James T. Kirk","Spock","Troi","Worf","Jean-Luc Picard"]
+rnk = ["Admiral","Commander","Captain","Commander","Leiutenant"]
+all_rnk = ["Admiral","Captain","Leiutenant","Commander","Ensign"]
+div = ["Command","Science","Command","Councelling","Security"]
+all_div = ["Command","Science","Councelling","Security"]
+id = ["NCC-1701-D","NCC-4682","NCC-0193-D","NCC-5138","NCC-1934-S"]
+tbl = []
+import re
+
+def init_data():
+    for i in range(len(nam)):
+        row = [nam[i],rnk[i],div[i],id[i]]
+        tbl.append(row)
+    print(f"{'Name':10} {'Rank':10} {'Division':10} {'ID':10}")
+    for row in tbl:
+        print(f"{row[0]:10} {row[1]:15} {row[2]:10}")
+init_data()
