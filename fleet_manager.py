@@ -142,3 +142,19 @@ def search():
             break
         else:
             print("**NO MATCHES**")
+
+def filter():
+    while True:
+        i_filter = []
+        filter = input("Filter by division\n>>").strip()
+        for i in range(len(div)):
+            if filter.lower() in div[i].lower():
+                i_filter.append((nam[i], rnk[i], div[i], id[i]))
+        if i_filter:
+            print(f"**SEARCHING**\nShowing results for division: {filter}")
+            print(f"{'Name':20} {'Rank':15} {'Division':15} {'ID':10}")
+            for match in i_filter:
+                print(f"{match[0]:20} {match[1]:15} {match[2]:15} {match[3]:10}")
+                menu()
+        else:
+            print("**INVALID**\nChoose from:\n",div)
