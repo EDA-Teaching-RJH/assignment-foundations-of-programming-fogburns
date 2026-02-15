@@ -8,10 +8,10 @@ tbl = []
 import re
 
 def init_data():
+    tbl.clear()
     for i in range(len(nam)):
         row = [nam[i],rnk[i],div[i],id[i]]
         tbl.append(row)
-    print(f"{'Name':10} {'Rank':10} {'Division':10} {'ID':10}")
+    print(f"{'Name':20} {'Rank':15} {'Division':15} {'ID':10}")
     for row in tbl:
-        print(f"{row[0]:10} {row[1]:15} {row[2]:10}")
-init_data()
+        print(f"{row[0]:20} {row[1]:15} {row[2]:15} {row[3]:10}")
