@@ -50,3 +50,13 @@ def add_rnk():
         else:
             print("**ADDED**")
             break
+
+def add_div():
+    while True:
+        global new_div
+        new_div = input("Division >>").title().strip()
+        if new_div not in div:
+            print("**INVALID DIVISION**\nChoose from:\n",all_div)
+        else:
+            print("**ADDED**")
+            break
