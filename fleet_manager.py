@@ -60,3 +60,33 @@ def add_div():
         else:
             print("**ADDED**")
             break
+
+def add_id():
+        new_id = input("ID >>").upper().strip().replace(" ","-")
+        if new_id in id:
+            print("**ID ALREADY EXISTS**\n**TRY AGAIN**")
+            add_id()
+        else:
+            print("**ID ASSIGNED**\n",new_id)
+            print("Are these details correct\n",f'{new_nam:20}',f'{new_rnk:15}',f'{new_div:15}',f'{new_id:10}')
+            while True:
+                v = input("Y/N>>")
+                if v == "Y" or v == "y":
+                    print("**MEMBER ADDED**")
+                    nam.append(new_nam)
+                    rnk.append(new_rnk)
+                    div.append(new_div)
+                    id.append(new_id)
+                    break
+                elif v =="N" or v == "n":
+                    print("**DELETING DETAILS**")
+                    add_mem()
+                else:
+                    print("**INVALID INPUT**")
+                    add_id()
+        
+def add_mem():
+    add_nam()
+    add_rnk()
+    add_div()
+    add_id()
