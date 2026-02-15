@@ -40,3 +40,13 @@ def add_nam():
         else:
             print("**Accepted**")
             break
+
+def add_rnk():
+    while True: 
+        global new_rnk
+        new_rnk = input("Rank >>").title().strip()
+        if new_rnk not in all_rnk:
+            print("**INVALID RANK**\nChoose from: \n",all_rnk)
+        else:
+            print("**ADDED**")
+            break
