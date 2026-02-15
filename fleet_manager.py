@@ -90,3 +90,21 @@ def add_mem():
     add_rnk()
     add_div()
     add_id()
+
+def rem_mem():
+    while True:
+        global id
+        rem_id = input("Input valid ID\n>>").upper().strip().replace(" ","-")
+        if rem_id in id:
+            print("**ACCEPTED**\n**REMOVING**")
+            indi = [i for i, value in enumerate(id) if value == rem_id]
+            for index in sorted(indi, reverse=True):
+                del nam[index]
+                del rnk[index]
+                del div[index]
+                del id[index]
+            print("**COMPLETED**\nUpdated list of members:\n")
+            init_data()
+            break
+        else:
+            print("**INVALID**\nChoose from existing ID's:\n",id)
