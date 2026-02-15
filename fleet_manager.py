@@ -126,3 +126,19 @@ def up_rnk():
     else:
         print("**INVALID**\nChoose from existing ID's:\n",id)
         up_rnk()        
+
+def search():
+    while True:
+        matches = []
+        term = input("Search by term\n>>").strip()
+        for i in range(len(nam)):
+            if term.lower() in nam[i].lower():
+                matches.append((nam[i], rnk[i], div[i], id[i]))
+        if matches:
+            print(f"**SEARCHING**\nShowing results for term: {term}")
+            print(f"{'Name':20} {'Rank':15} {'Division':15} {'ID':10}")
+            for match in matches:
+                print(f"{match[0]:20} {match[1]:15} {match[2]:15} {match[3]:10}")
+            break
+        else:
+            print("**NO MATCHES**")
