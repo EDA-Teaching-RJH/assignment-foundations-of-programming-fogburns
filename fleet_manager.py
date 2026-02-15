@@ -158,3 +158,18 @@ def filter():
                 menu()
         else:
             print("**INVALID**\nChoose from:\n",div)
+
+def pay_roll():
+    ad_p = int(rnk.count("Admiral"))*1500
+    ad = rnk.count("Admiral")
+    ca_p = int(rnk.count("Captain"))*1000
+    ca = rnk.count("Captain")
+    li_p = int(rnk.count("Lieutenant"))*850
+    li = rnk.count("Lieutenant")
+    co_p = int(rnk.count("Commander"))*750
+    co = rnk.count("Commander")
+    en_p = int(rnk.count("Ensign"))*500
+    en = rnk.count("Ensign")
+    total = ad_p+ca_p+li_p+co_p+en_p
+    print("Each\nAdmiral - 1500 CR\nCaptain - 1000 CR\nLieuntenant - 850 CR\nCommander - 750\nEnsign - 500 CR")
+    print("Total\n",ad,"Admiral(s)\n",ca,"Captain(s)\n",li,"Lieutenant(s)\n",co,"Commander(s)\n",en,"Ensign(s)\nTotal :",total)
