@@ -108,3 +108,21 @@ def rem_mem():
             break
         else:
             print("**INVALID**\nChoose from existing ID's:\n",id)
+
+def up_rnk():
+    up_id = input("Input valid ID\n>>").upper().strip().replace(" ","-")
+    if up_id in id:
+        index = id.index(up_id)
+        print(f"**ACCEPTED**\nCurrent rank: {rnk[index]}")
+        while True:
+            new_rnk = input("What new rank do you want to assign?\n>>").capitalize().strip()
+            if new_rnk in all_rnk:
+                rnk[index] = new_rnk
+                print("**COMPLETED**\nUpdated information:\n")
+                init_data()
+                break
+            else:
+                print("**INVALID RANK**\nChoose from:\n",all_rnk)
+    else:
+        print("**INVALID**\nChoose from existing ID's:\n",id)
+        up_rnk()        
