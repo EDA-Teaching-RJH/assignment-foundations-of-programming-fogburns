@@ -27,3 +27,16 @@ def new_user():
         else:
             print("**Accepted**")
             return user_nam
+
+def add_nam():
+    print("Enter members details:")
+    while True:
+        global new_nam
+        new_nam = input("Full name >>").title().strip()
+        if not re.match("^[A-Za-z\\s]*$", new_nam):
+            print("Incorrect input\n**TRY AGAIN**")
+        elif len(new_nam) > 20:
+                print("Maximum 20 characters\n**TRY AGAIN**")
+        else:
+            print("**Accepted**")
+            break
