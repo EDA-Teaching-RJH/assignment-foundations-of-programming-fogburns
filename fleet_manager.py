@@ -173,3 +173,8 @@ def pay_roll():
     total = ad_p+ca_p+li_p+co_p+en_p
     print("Each\nAdmiral - 1500 CR\nCaptain - 1000 CR\nLieuntenant - 850 CR\nCommander - 750\nEnsign - 500 CR")
     print("Total\n",ad,"Admiral(s)\n",ca,"Captain(s)\n",li,"Lieutenant(s)\n",co,"Commander(s)\n",en,"Ensign(s)\nTotal :",total)
+
+def co_office():
+    ca = rnk.count("Captain")
+    co = rnk.count("Commander")
+    print("Amount of officers;\nCaptain(s) -",ca,"\nCommander(s) -",co,"\nTotal :",co+ca)
