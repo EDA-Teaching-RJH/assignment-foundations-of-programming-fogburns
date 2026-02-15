@@ -15,3 +15,15 @@ def init_data():
     print(f"{'Name':20} {'Rank':15} {'Division':15} {'ID':10}")
     for row in tbl:
         print(f"{row[0]:20} {row[1]:15} {row[2]:15} {row[3]:10}")
+
+def new_user():
+    while True:
+        global user_nam
+        user_nam = str(input("Enter your full name >>")).title().strip()
+        if not re.match("^[A-Za-z\\s]*$", user_nam):
+            print("Incorrect input\n**TRY AGAIN**")
+        elif len(user_nam) > 20:
+            print("Maximum 20 characters\n**TRY AGAIN**")
+        else:
+            print("**Accepted**")
+            return user_nam
