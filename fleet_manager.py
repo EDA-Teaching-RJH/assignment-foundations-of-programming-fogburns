@@ -77,7 +77,7 @@ def add_id():
                     rnk.append(new_rnk)
                     div.append(new_div)
                     id.append(new_id)
-                    break
+                    menu()
                 elif v =="N" or v == "n":
                     print("**DELETING DETAILS**")
                     add_mem()
